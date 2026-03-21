@@ -111,7 +111,7 @@ export const aboutParagraphs: TextSegment[][] = [
     {
       type: "text",
       content:
-        "In my free time, I enjoy a few unusual hobbies, including solving The New York Times crosswords and knitting.",
+        "In my free time, I enjoy a few quaint hobbies, including solving The New York Times crosswords and knitting.",
     },
   ],
 ];

@@ -94,7 +94,7 @@ export default function Header() {
           Software Engineer & Designer
         </h2>
         <p className="text-secondary mt-4 max-w-xs leading-normal">
-          I build accessible, pixel-perfect digital experiences for the web.
+          I build software where solid engineering meets human-centred design.
         </p>
         <nav className="nav hidden lg:block" aria-label="In-page jump links">
           <ul className="mt-16 w-max">
