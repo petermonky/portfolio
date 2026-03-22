@@ -13,7 +13,7 @@ export default function ExperienceCard({ item }: ExperienceCardProps) {
         <div className="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-xl transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:-translate-y-0.5 lg:group-hover:shadow-[10px_10px_40px_#e2e2e2,-10px_-10px_40px_#fefefe] lg:group-hover:backdrop-blur" />
         <header className="text-tertiary z-10 mt-1 mb-2 flex flex-col text-xs font-semibold tracking-wide uppercase sm:col-span-2">
           {item.periods.map((period) => (
-            <span>{period}</span>
+            <span key={period.replace("-", "to")}>{period}</span>
           ))}
         </header>
         <div className="z-10 sm:col-span-6">

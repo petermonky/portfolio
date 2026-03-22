@@ -1,6 +1,7 @@
 import Image from "next/image";
 import type { ProjectItem } from "@/data/site";
 import LinkWithIcon from "@/components/common/LinkWithIcon";
+import TagPill from "../common/TagPill";
 
 type ProjectCardProps = {
   item: ProjectItem;
@@ -25,6 +26,13 @@ export default function ProjectCard({ item }: ProjectCardProps) {
           <p className="text-secondary mt-2 text-sm leading-normal">
             {item.description}
           </p>
+          <ul className="mt-2 flex flex-wrap" aria-label="Technologies used">
+            {item.technologies.map((tech) => (
+              <li key={tech} className="mt-2 mr-1.5">
+                <TagPill text={tech} />
+              </li>
+            ))}
+          </ul>
         </div>
         <Image
           src={item.imageDirectory}

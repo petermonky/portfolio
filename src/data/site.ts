@@ -33,6 +33,7 @@ export type ProjectItem = {
   description: string;
   imageAlt: string;
   imageDirectory: string;
+  technologies: string[];
 };
 
 export type TextSegment =
@@ -206,9 +207,10 @@ export const projectItems: ProjectItem[] = [
     title: "PulsePace",
     href: "https://github.com/PulsePace/PulsePace",
     description:
-      "A multiplayer rhythm game for iPad, developed for iPadOS using MVVM principles for a clean and maintainable architecture.",
+      "A rhythm game for iPad, developed for iPadOS using MVVM principles, featuring a time-synchronised beat engine, a level designer, and real-time online multiplayer.",
     imageAlt: "PulsePace GitHub card",
     imageDirectory: "/images/projects/pulsepace.webp",
+    technologies: ["Swift", "SwiftUI", "GCP"],
   },
   {
     id: "minecraft-peggle",
@@ -218,6 +220,7 @@ export const projectItems: ProjectItem[] = [
       "A Minecraft-themed Peggle game for iPad, built with Swift and SwiftUI, featuring multiple game modes, a level designer, and custom scoring and visual effects.",
     imageAlt: "Minecraft Peggle GitHub card",
     imageDirectory: "/images/projects/minecraft-peggle.webp",
+    technologies: ["Swift", "SwiftUI", "Adobe Photoshop"],
   },
   {
     id: "google-minesweeper-clone",
@@ -227,5 +230,6 @@ export const projectItems: ProjectItem[] = [
       "A modern take on Minesweeper built with React and Sass, featuring multiple difficulty levels, polished game logic, and a responsive interface.",
     imageAlt: "Google Minesweeper clone card",
     imageDirectory: "/images/projects/google-minesweeper.webp",
+    technologies: ["JavaScript", "Node.js", "React", "Sass"],
   },
 ];
