@@ -147,7 +147,7 @@ export const experienceItems: ExperienceItem[] = [
     companyUrl:
       "https://www.airforce.mil.kr/user/indexSub.action?codyMenuSeq=56562&siteId=airforce-eng",
     description:
-      "Lived in Seoul translating aerospace documentation for ICAO/FAA/NASA compliance and keeping joint operations aligned. Helped the ROK-US Freedom Shield exercise run smoothly by interpreting at Camp Humphreys and in the MND Exercise Control Cell.",
+      "Lived in Seoul translating aerospace documentation for ICAO/FAA/NASA compliance and keeping joint operations aligned. Helped the ROK-US Freedom Shield exercise run smoothly by interpreting at Camp Humphreys and in the MND Exercise Control Cell. A brief pause from my career.",
     technologies: [],
   },
   {
