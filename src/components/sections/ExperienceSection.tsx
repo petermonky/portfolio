@@ -15,11 +15,10 @@ export default function ExperienceSection() {
           <ExperienceCard key={item.id} item={item} />
         ))}
       </ol>
-      {/* TODO: */}
-      {/* <div className="mt-12">
+      <div className="mt-12">
         <a
           className="group/link text-secondary hover:text-primary inline-flex items-baseline text-base leading-tight font-semibold"
-          href="/resume.pdf"
+          href="/documents/resume_latest.pdf"
           target="_blank"
           rel="noreferrer noopener"
           aria-label="View Résumé (opens in a new tab)"
@@ -34,7 +33,7 @@ export default function ExperienceSection() {
             </span>
           </span>
         </a>
-      </div> */}
+      </div>
     </SectionShell>
   );
 }
