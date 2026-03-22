@@ -21,6 +21,10 @@ body {
   isolation: isolate;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .dot-grid-canvas {
   position: fixed;
   inset: 0;
