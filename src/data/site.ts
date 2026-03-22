@@ -163,6 +163,7 @@ export const experienceItems: ExperienceItem[] = [
       "TypeScript",
       "React",
       "Node.js",
+      "Next.js",
       "Salesforce",
       "Python",
       "FastAPI",
