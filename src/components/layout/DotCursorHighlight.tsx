@@ -6,7 +6,7 @@ const DOT_SPACING = 22;
 const DOT_RADIUS = 1.2;
 const HIGHLIGHT_RADIUS = 220;
 const BASE_ALPHA = 0.08;
-const MAX_ALPHA = 0.24;
+const MAX_ALPHA = 0.28;
 const DOT_COLOR = "15, 23, 42";
 
 export default function DotCursorHighlight() {
