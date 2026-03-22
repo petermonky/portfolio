@@ -10,7 +10,7 @@ type ProjectCardProps = {
 export default function ProjectCard({ item }: ProjectCardProps) {
   return (
     <li className="mb-12">
-      <div className="group relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:group-hover/list:opacity-50 lg:hover:opacity-100!">
+      <div className="group relative grid gap-4 pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:group-hover/list:opacity-50 lg:hover:opacity-100!">
         <div className="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-xl transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:-translate-y-0.5 lg:group-hover:shadow-[10px_10px_40px_#e2e2e2,-10px_-10px_40px_#fefefe] lg:group-hover:backdrop-blur" />
         <div className="z-10 sm:order-2 sm:col-span-6">
           <h3>
