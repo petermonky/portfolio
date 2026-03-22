@@ -10,6 +10,8 @@ export type SocialIconName =
   | "instagram"
   | "goodreads";
 
+export type ProjectCategory = "Engineering" | "Design" | "Research";
+
 export type SocialLink = {
   href: string;
   label: string;
@@ -28,11 +30,15 @@ export type ExperienceItem = {
 
 export type ProjectItem = {
   id: string;
+  isHighlight: boolean;
+  year: number;
+  categories: ProjectCategory[];
   title: string;
-  href: string;
-  description: string;
-  imageAlt: string;
-  imageDirectory: string;
+  href?: string;
+  label?: string;
+  description?: string;
+  imageAlt?: string;
+  imageDirectory?: string;
   technologies: string[];
 };
 
@@ -203,9 +209,35 @@ export const experienceItems: ExperienceItem[] = [
 
 export const projectItems: ProjectItem[] = [
   {
+    id: "llm-study",
+    isHighlight: false,
+    year: 2026,
+    categories: ["Research", "Engineering"],
+    title: "Alternating Attention and Reliance on LLMs",
+    technologies: ["Next.js", "Tailwind CSS", "OpenAI"],
+  },
+  {
+    id: "personal-brand-style-guide",
+    isHighlight: true,
+    year: 2025,
+    categories: ["Research", "Design"],
+    title: "Peter's Style Guide",
+    href: "/documents/personal-brand-style-guide.pdf",
+    label: "Style Guide",
+    description:
+      "An experimental brand style guide that translates my interests and identity into a refined visual system rooted in grids, contrast, and code-like structure.",
+    imageAlt: "Personal brand style guide card",
+    imageDirectory: "/images/projects/personal-brand-style-guide.webp",
+    technologies: ["Adobe Illustrator", "Adobe InDesign", "Adobe Photoshop"],
+  },
+  {
     id: "pulsepace",
+    isHighlight: true,
+    year: 2023,
+    categories: ["Engineering", "Design"],
     title: "PulsePace",
     href: "https://github.com/PulsePace/PulsePace",
+    label: "GitHub",
     description:
       "A rhythm game for iPad, developed for iPadOS using MVVM principles, featuring a time-synchronised beat engine, a level designer, and real-time online multiplayer.",
     imageAlt: "PulsePace GitHub card",
@@ -213,9 +245,43 @@ export const projectItems: ProjectItem[] = [
     technologies: ["Swift", "SwiftUI", "GCP"],
   },
   {
+    id: "clubco",
+    isHighlight: false,
+    year: 2023,
+    categories: ["Design"],
+    title: "ClubCo",
+    href: "https://www.figma.com/proto/yMjnVnn1sMiC4F2WFTxRXV/ClubCo---Draft-3?node-id=1-593&p=f&t=byiKRxtbHpWXbCLT-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A593&show-proto-sidebar=1",
+    label: "Prototype",
+    technologies: ["Figma", "Adobe Photoshop"],
+  },
+  {
+    id: "date-planner",
+    isHighlight: false,
+    year: 2023,
+    categories: ["Design"],
+    title: "Date Planner",
+    href: "https://www.figma.com/proto/XBGzRkswz6ykTq1A4fNjY2/G6-Group-HiFi-v2?node-id=204-9674&p=f&t=S2ULMj9rIkRaLzlf-0&scaling=scale-down&content-scaling=fixed&page-id=204%3A6730&starting-point-node-id=204%3A9674&show-proto-sidebar=1",
+    label: "Prototype",
+    technologies: ["Balsamiq", "Figma"],
+  },
+  {
+    id: "sleep-tracker",
+    isHighlight: false,
+    year: 2023,
+    categories: ["Design"],
+    title: "Sleep Tracker",
+    href: "https://www.figma.com/proto/ADKTr5YKmOMv3RnZRc3lmK/CS3230-IDE-Final-Interactive-Prototype?node-id=66-566&starting-point-node-id=66%3A566&show-proto-sidebar=1",
+    label: "Prototype",
+    technologies: ["Balsamiq", "Figma"],
+  },
+  {
     id: "minecraft-peggle",
+    isHighlight: true,
+    year: 2022,
+    categories: ["Engineering", "Design"],
     title: "Minecraft Peggle",
     href: "https://github.com/petermonky/minecraft-peggle",
+    label: "GitHub",
     description:
       "A Minecraft-themed Peggle game for iPad, built with Swift and SwiftUI, featuring multiple game modes, a level designer, and custom scoring and visual effects.",
     imageAlt: "Minecraft Peggle GitHub card",
@@ -223,13 +289,37 @@ export const projectItems: ProjectItem[] = [
     technologies: ["Swift", "SwiftUI", "Adobe Photoshop"],
   },
   {
+    id: "tinner",
+    isHighlight: false,
+    year: 2022,
+    categories: ["Engineering", "Design"],
+    title: "Tinner",
+    href: "https://github.com/petermonky/tinner",
+    label: "GitHub",
+    technologies: ["Java", "Figma", "PlantUML"],
+  },
+  {
     id: "google-minesweeper-clone",
+    isHighlight: true,
+    year: 2021,
+    categories: ["Engineering"],
     title: "Google Minesweeper",
     href: "https://gmsc-six.vercel.app/",
+    label: "Game",
     description:
       "A modern take on Minesweeper built with React and Sass, featuring multiple difficulty levels, polished game logic, and a responsive interface.",
     imageAlt: "Google Minesweeper clone card",
     imageDirectory: "/images/projects/google-minesweeper.webp",
     technologies: ["JavaScript", "Node.js", "React", "Sass"],
+  },
+  {
+    id: "js-slang",
+    isHighlight: false,
+    year: 2021,
+    categories: ["Research", "Engineering"],
+    title: "Source Academy Stepper Tool",
+    href: "https://docs.sourceacademy.org/source_2_stepper.pdf",
+    label: "Documentation",
+    technologies: ["TypeScript", "Node.js", "React"],
   },
 ];

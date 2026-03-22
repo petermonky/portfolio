@@ -22,7 +22,7 @@ export default function Footer() {
           href="https://brittanychiang.com/"
           label="Brittany Chiang"
         >
-          Brittany Chiang's portfolio
+          Brittany Chiang&apos;s portfolio
         </ExternalTextLink>
         .
       </p>

@@ -18,7 +18,7 @@ export default function ExperienceSection() {
       <div className="mt-12">
         <a
           className="group/link text-secondary hover:text-primary inline-flex items-baseline text-base leading-tight font-semibold"
-          href="/documents/resume_latest.pdf"
+          href="/documents/resume-latest.pdf"
           target="_blank"
           rel="noreferrer noopener"
           aria-label="View Résumé (opens in a new tab)"

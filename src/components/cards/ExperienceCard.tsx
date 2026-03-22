@@ -18,17 +18,14 @@ export default function ExperienceCard({ item }: ExperienceCardProps) {
         </header>
         <div className="z-10 sm:col-span-6">
           <h3 className="text-primary leading-snug font-medium">
-            <div>
-              <LinkWithIcon
-                href={item.companyUrl}
-                label={`${item.role} at ${item.company}`}
-                className="group/link text-primary inline-flex items-baseline text-base leading-tight font-medium"
-              >
-                <span className="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block" />
-                {item.role} ·{" "}
-                <span className="inline-block">{item.company}</span>
-              </LinkWithIcon>
-            </div>
+            <LinkWithIcon
+              href={item.companyUrl}
+              label={`${item.role} at ${item.company}`}
+              className="group/link text-primary inline-flex items-baseline text-base leading-tight font-medium"
+            >
+              <span className="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block" />
+              {item.role} · <span className="inline-block">{item.company}</span>
+            </LinkWithIcon>
           </h3>
           <p className="text-secondary mt-2 text-sm leading-normal">
             {item.description}

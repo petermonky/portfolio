@@ -5,7 +5,7 @@ type LinkWithIconProps = {
   href: string;
   label: string;
   children: ReactNode;
-  iconDirection?: "up-right" | "right";
+  iconDirection?: "up-right" | "right" | "left";
   newTab?: boolean;
   className?: string;
   iconClassName?: string;
