@@ -67,7 +67,7 @@ export const aboutParagraphs: TextSegment[][] = [
     {
       type: "text",
       content:
-        "I am currently completing my studies and working on my final year project, where I investigate the effects of alternating attention on people's reliance on LLMs. Over the course of my degree, I have developed strong interests in software engineering, artificial intelligence, and human-computer interaction. I hope to continue deepening both my academic and industry experience in these areas.",
+        "I am currently completing my studies and working on my final year project, where I investigate the effects of alternating attention on people's reliance on LLMs. Over the course of my degree, I have developed strong interests in human-computer interaction and artificial intelligence. I hope to continue deepening both my academic and industry experience in these areas.",
     },
   ],
   [
