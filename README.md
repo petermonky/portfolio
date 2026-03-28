@@ -1,36 +1,85 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Peter Jung Portfolio
 
-## Getting Started
+Personal portfolio site built with Next.js App Router, React 19, TypeScript, and Tailwind CSS v4. The site combines a single-page landing experience with a dedicated projects index, with most portfolio content managed from one central data file.
 
-First, run the development server:
+## Stack
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- Next.js 16 with the App Router
+- React 19
+- TypeScript with `@/*` path aliases
+- Tailwind CSS v4
+- `next/font` for Funnel Sans
+- React Compiler enabled in `next.config.ts`
+
+## Routes
+
+- `/`: landing page with About, Experience, and featured Projects sections
+- `/projects`: full project archive in a table layout
+
+## Project Structure
+
+```text
+src/
+  app/
+    layout.tsx          # global layout, metadata, fonts, cursor effect
+    page.tsx            # landing page
+    projects/page.tsx   # project archive
+    globals.css         # theme tokens and global styles
+  components/
+    common/             # shared UI primitives
+    cards/              # experience/project cards
+    layout/             # header, footer, decorative effects
+    sections/           # home page sections
+    icons/              # social/media icons
+  data/
+    site.ts             # navigation, about copy, experience, projects, socials
+public/
+  documents/            # resume and style guide PDFs
+  images/projects/      # project thumbnails
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Content Management
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Most site content lives in `src/data/site.ts`:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `aboutParagraphs`: rich text for the About section
+- `navLinks`: section anchors used by the header navigation
+- `socialLinks`: social profile links shown in the header
+- `experienceItems`: experience timeline entries
+- `projectItems`: featured and archive project data
 
-## Learn More
+To add or update portfolio content, start there. For projects with preview cards, also add the corresponding image under `public/images/projects`. PDF assets linked from the site live in `public/documents`.
 
-To learn more about Next.js, take a look at the following resources:
+## Development
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Install dependencies:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+pnpm install
+```
 
-## Deploy on Vercel
+Start the dev server:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+pnpm dev
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Open `http://localhost:3000`.
+
+## Scripts
+
+- `pnpm dev`: start the local Next.js dev server
+- `pnpm build`: create a production build
+- `pnpm start`: run the production server
+- `pnpm lint`: run ESLint
+- `pnpm format`: format the repo with Prettier
+
+## Credits
+
+- Design template inspiration from [Brittany Chiang](https://brittanychiang.com/).
+
+## Notes
+
+- The global theme and color tokens are defined in `src/app/globals.css`.
+- The primary font is configured in `src/app/fonts.ts`.
+- Header section highlighting is handled client-side with `IntersectionObserver` in `src/components/layout/Header.tsx`.

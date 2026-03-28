@@ -17,12 +17,12 @@ export default function Footer() {
         <ExternalTextLink href="https://vercel.com/" label="Vercel">
           Vercel
         </ExternalTextLink>
-        . Design inspired by{" "}
+        . Project repository available on{" "}
         <ExternalTextLink
-          href="https://brittanychiang.com/"
-          label="Brittany Chiang"
+          href="https://github.com/petermonky/portfolio"
+          label="GitHub"
         >
-          Brittany Chiang
+          GitHub
         </ExternalTextLink>
         .
       </p>
